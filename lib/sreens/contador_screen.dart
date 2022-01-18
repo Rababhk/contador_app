@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
-  final tamano30 = const TextStyle(fontSize: 30);
-  int contador = 0;
+class ContadorScreen extends StatefulWidget {
 
-  HomeScreen({Key? key}) : super(key: key);
+  ContadorScreen({Key? key}) : super(key: key);
+
+  @override
+  State<ContadorScreen> createState() => _ContadorScreenState();
+}
+
+class _ContadorScreenState extends State<ContadorScreen> {
+  final tamano30 = const TextStyle(fontSize: 30);
+
+  int contador = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('App contador'),
+          title: const Text('🍪🐶DAR DE COMER A SCOOBY🐶🍪'),
           elevation: 0,
         ),
         backgroundColor: Colors.white70,
