@@ -42,13 +42,39 @@ class _ContadorScreenState extends State<ContadorScreen> {
             ],
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          
-          child: const Icon(Icons.add),
-          elevation: 10,
-          onPressed: () {  
-            contador ++;
-          },
+        floatingActionButton: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            FloatingActionButton(
+              child: const Icon(Icons.add),
+              elevation: 10,
+              onPressed: () {  
+                contador ++;
+                //lE TENGO QUE AVISAR DE QUE HAN HABIDO CAMBIOS EN MI UI;
+                setState(() {});
+              },
+            ),
+            SizedBox(width: 20,),
+            FloatingActionButton(
+              child: const Icon(Icons.restore),
+              elevation: 10,
+              onPressed: () {  
+                contador = 0;
+                //lE TENGO QUE AVISAR DE QUE HAN HABIDO CAMBIOS EN MI UI;
+                setState(() {});
+              },
+            ),
+                    SizedBox(width: 20,),
+            FloatingActionButton(
+              child: const Icon(Icons.remove),
+              elevation: 10,
+              onPressed: () {  
+                contador--;
+                //lE TENGO QUE AVISAR DE QUE HAN HABIDO CAMBIOS EN MI UI;
+                setState(() {});
+              },
+            ),
+          ],
         ),
         floatingActionButtonLocation:FloatingActionButtonLocation.miniCenterFloat,
       );
